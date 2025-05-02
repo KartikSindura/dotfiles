@@ -151,3 +151,13 @@ export PATH=$PATH:/path/to/gitmux
 
 # Go
 export PATH=$PATH:$HOME/go/bin
+
+. "$HOME/.local/bin/env"
+
+# lbomp and llvm
+export LDFLAGS="-L/opt/homebrew/opt/libomp/lib -L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libomp/include -I/opt/homebrew/opt/llvm/include"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export CC="/opt/homebrew/opt/llvm/bin/clang"
+export CXX="/opt/homebrew/opt/llvm/bin/clang++"
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
